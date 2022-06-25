@@ -1,0 +1,194 @@
+.wrapper {
+  background-image: url("../assets/desktop/bitmap.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+}
+.pacmanImg {
+  width: 418px;
+  margin-top: 13px;
+}
+.heading {
+  font-size: 47px;
+  margin-top: 15px;
+  font-weight: 800;
+}
+.connectBtn {
+  display: flex;
+  border-radius: 10px;
+  margin-top: 50px;
+  height: 92px;
+  background-color: #1e31d8;
+}
+
+.connectBtnIcon {
+  width: 123px;
+  height: 100%;
+  padding: 8px 28px 8px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+.connectBtnText {
+  font-size: 20px;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  padding: 27px 39px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 100%;
+}
+.presaleBtn {
+  border: 2px solid white;
+  font-weight: bold;
+  font-style: italic;
+  background-color: transparent;
+  color: white;
+  padding: 30px 90px;
+  margin-top: 65px;
+  font-size: 18.5px;
+}
+.footerSection {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerSection p {
+  padding: 20px 0;
+  font-size: 19.2px;
+  font-weight: 300;
+}
+.connectedSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.walletConnectedContainer {
+  display: flex;
+  align-items: center;
+  font-size: 29px;
+  margin-bottom: 18px;
+}
+.walletConnectedMeta {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+}
+.walletId {
+  font-size: 15px;
+}
+.mintBtn {
+  margin-top: 50px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  background-color: #1e31d8;
+  padding: 24px 160px;
+  border-radius: 15px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    background-image: url("../assets/mobile/bitmap@3x.png");
+    background-size: contain;
+    background-position: bottom;
+  }
+}
+@media screen and (max-width: 550px) {
+  .pacmanImg {
+    width: 310px;
+    margin-top: 40px;
+  }
+  .heading {
+    font-size: 36px;
+    margin-top: 50px;
+    font-weight: 800;
+  }
+  .connectBtn {
+    margin-top: 35px;
+    height: 65px;
+  }
+  .connectBtnIcon {
+    width: 85px;
+    padding: 5px 18px 5px 18px;
+  }
+  .connectBtnText {
+    font-size: 23px;
+    padding: 15px 25px;
+  }
+  .presaleBtn {
+    padding: 22px 37px;
+    margin-top: 35px;
+    font-size: 18px;
+  }
+  .footerSection p {
+    padding: 15px 0;
+    font-size: 13.2px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+
+  .connectedSection {
+
+    margin-top: 40px;
+  }
+  .walletConnectedContainer {
+    font-size: 25px;
+    margin-bottom: 18px;
+  }
+  .walletConnectedMeta {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+  .walletId {
+    font-size: 13px;
+  }
+  .mintBtn {
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: #1e31d8;
+    padding: 15px 110px;
+    border-radius: 12px;
+    letter-spacing: 2px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .pacmanImg {
+    width: 85%;
+    margin-top: 40px;
+  }
+  .heading {
+    font-size: 34px;
+  }
+  .connectBtnIcon {
+    width: 75px;
+    padding: 5px 15px 5px 15px;
+  }
+  .connectBtnText {
+    font-size: 26px;
+    padding: 15px 22px;
+  }
+  .presaleBtn {
+    padding: 22px 38px;
+  }
+}
