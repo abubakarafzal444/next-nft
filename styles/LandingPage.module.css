@@ -28,7 +28,14 @@
   background-color: #1e31d8;
   cursor: pointer;
 }
-
+.iconBtn:hover{
+    background-color: #3b4bdb;
+}
+.iconBtn:active{
+    background-color: #3b4bdb;
+    box-shadow: 0 2px rgba(102, 102, 102, 0.696);
+    transform: translateY(2px);
+}
 .iconBtnIcon {
   width: 123px;
   height: 100%;
@@ -92,7 +99,7 @@
 .walletId {
   font-size: 15px;
 }
-.simpleBtn, .simpleBtn:active {
+.simpleBtn {
   margin-top: 50px;
   font-size: 35px;
   font-weight: bold;
@@ -102,6 +109,14 @@
   border-radius: 15px;
   letter-spacing: 2px;
   cursor: pointer;
+}
+.simpleBtn:hover{
+    background-color: #3b4bdb;
+}
+.simpleBtn:active{
+    background-color: #3b4bdb;
+    box-shadow: 0 2px rgba(102, 102, 102, 0.696);
+    transform: translateY(2px);
 }
 
 @media screen and (max-width: 1000px) {
