@@ -6,28 +6,27 @@ import { useState } from "react";
 import BorderContainer from "../components/BorderContainer";
 import SimpleButton from "../components/SimpleButton";
 import IconButton from "../components/IconButton";
-export default function Home() {
+export default function PublicSale() {
   const [isConnected, setIsConnected] = useState(false);
   const [walletId,setWalletId]=useState("0x2D4e853789754960d06E90c4159e704bA3568478")
   //Note: if you update isConnected state to true, it will show wallet connected on screen.
   //You also need to update walletID state along with it so that it is displayed correctly.
-  const [presaleStatus,setPresaleStatus]=useState("notStarted");
-  //Presale status is being shown in transparent box. It has 3 options on the basis of which
+  const [saleStatus,setSaleStatus]=useState("ended");
+  //publicSale status is being shown in transparent box. It has 3 options on the basis of which
   //, it will show different text.options are: notStarted, started and ended. Update this 
-  //state with your logic. If presaleStatus is "ended", it will not show mint button or connect wallet button.
+  //state with your logic. If saleStatus is "ended", it will not show mint button or connect wallet button.
 
   const [isWalletWhitelisted,setIsWalletWhitelisted]=useState(true);
   //If wallet is whitelisted, only then, it will show mint button. update this state with your logic.
 
-  //Note: visit domainName/public-sale for public sale page
   return (
     <>
       <header className={styles.wrapper}>
         <div className={styles.pacmanImg}>
           <Image src={nameLogo} alt="logo img" />
         </div>
-        <h1 className={styles.heading}>Whitelist Presale</h1>
-        {!isConnected&&presaleStatus!=="ended" && (
+        <h1 className={styles.heading}>Public Sale</h1>
+        {!isConnected&&saleStatus!=="ended" && (
           <IconButton text="Connect Wallet" onClick={() => setIsConnected(true)} icon={metamaskLogo}/>
         )}
         {isConnected && (
@@ -44,7 +43,7 @@ export default function Home() {
           </div>
         )}
         {!isConnected && (
-          <BorderContainer text={presaleStatus==='started'&&"presale has started"||presaleStatus==="ended"&&"presale has ended"||presaleStatus==="notStarted"&&"presale hasn't started yet"}/>
+          <BorderContainer text={saleStatus==='started'&&"public sale has started"||saleStatus==="ended"&&"public sale has ended"||saleStatus==="notStarted"&&"public sale hasn't started yet"}/>
         )}
         {isConnected &&isWalletWhitelisted&&<SimpleButton text="MINT" />}
         {isConnected &&!isWalletWhitelisted&&<BorderContainer text="your wallet is not on the whitelist"/>}
